@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Please Forgive Me Angel ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at top, #ff758c, #ff7eb3, #ff4d6d);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Soft floating hearts */
+.heart {
+    position: absolute;
+    color: rgba(255,255,255,0.4);
+    font-size: 18px;
+    animation: float 8s infinite ease-in;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 60px rgba(255, 0, 100, 0.5);
+    max-width: 600px;
+    animation: fadeIn 2s ease;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4d6d;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffe6eb;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>I Am Truly Sorry, My Angel ❤️</h1>
+    <p>
+        I have been thinking about everything… and my heart feels heavy.<br><br>
+
+        I never meant to hurt you. That was never my intention.<br>
+        Seeing you upset because of me hurts more than I can explain.<br><br>
+
+        I know I am not perfect. I know I make mistakes.<br>
+        But please believe me when I say — my heart is always with you.<br><br>
+
+        I wanted to give you something beautiful…<br>
+        something that would make you smile.<br>
+        Instead, I made you feel hurt — and that breaks me.<br><br>
+
+        If I could take the pain back, I would.<br>
+        If I could show you how deeply sorry I am, I would do it a thousand times.<br><br>
+
+        Please forgive me, my angel.<br>
+        You mean more to me than I sometimes know how to show. ❤️
+    </p>
+
+    <button onclick="forgive()">Forgive Me?</button>
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 25 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 4 + 4 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+function forgive() {
+    alert("Thank you for giving me a chance, my angel ❤️ I promise to do better.");
+}
+</script>
+
+</body>
+</html>
